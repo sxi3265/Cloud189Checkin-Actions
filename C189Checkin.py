@@ -1,10 +1,10 @@
-import requests, time, re, rsa, json, base64
+import requests, time, re, rsa, json, base64, os
 from urllib import parse
 
 s = requests.Session()
 
-username = ""
-password = ""
+username = os.getenv('username')
+password = os.getenv('password')
 
 if(username == "" or password == ""):
     username = input("账号：")
